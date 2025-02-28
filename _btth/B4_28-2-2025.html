@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Information</title>
+    <style>
+      * {
+        font-family: serif;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      .info-table {
+        width: 100%;
+        max-width: 600px;
+        border-collapse: collapse;
+      }
+      .info-table td {
+        padding: 8px;
+      }
+      .info-table td:first-child {
+        font-weight: bold;
+        width: 30%;
+      }
+      .radio-label {
+        margin-right: 15px;
+      }
+
+      .text_input {
+        width: 100%;
+      }
+
+      article {
+        font-weight: bold;
+        font-size: large;
+        margin-top: 1cm;
+      }
+    </style>
+  </head>
+  <body>
+    <article>Basic Info</article>
+    <hr style="margin-top: 0%" />
+    <table class="info-table">
+      <tr>
+        <td>Employee ID</td>
+        <td>9</td>
+      </tr>
+      <tr>
+        <td>Last Name</td>
+        <td>Dodsworth</td>
+      </tr>
+      <tr>
+        <td><label for="first_name">First Name</label></td>
+        <td>
+          <input
+            type="text"
+            id="first_name"
+            name="firstname"
+            class="text_input"
+            autocomplete
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>Gender</td>
+        <td>
+          <label class="radio-label"
+            ><input type="radio" name="gender" /> Male</label
+          ><br />
+          <label class="radio-label"
+            ><input type="radio" name="gender" /> Female</label
+          ><br />
+          <label class="radio-label"
+            ><input type="radio" name="gender" /> XXX</label
+          ><br />
+          <label class="radio-label"
+            ><input type="radio" name="gender" checked /> ZZZ</label
+          >
+        </td>
+      </tr>
+      <tr>
+        <td><label for="Title">Title</label></td>
+        <td>
+          <input type="text" id="Title" name="Title" class="text_input" />
+        </td>
+      </tr>
+      <tr>
+        <td><label for="Suffix">Suffix</label></td>
+        <td>
+          <input type="text" id="Suffix" name="Suffix" class="text_input" />
+        </td>
+      </tr>
+      <tr>
+        <td><label for="BirthDate">BirthDate</label></td>
+        <td>
+          <input
+            type="datetime-local"
+            id="BirthDate"
+            name="BirthDate"
+            class="text_input"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td><label for="HireDate">HireDate</label></td>
+        <td>
+          <input
+            type="datetime-local"
+            id="HireDate"
+            name="HireDate"
+            class="text_input"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td><label for="SSN">SSN # (if applicable)</label></td>
+        <td>
+          <input
+            type="email"
+            id="SSN"
+            name="SSN"
+            class="text_input"
+            novalidate
+          />
+        </td>
+      </tr>
+      <tr>
+        <td><label for="rp">Reports To</label></td>
+        <td>
+          <select name="rp" size="3" id="rp">
+            <option value="option1">Buchanan</option>
+            <option value="option2">nguyendz</option>
+            <option value="option3">nguỹenautrai</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+    <article>Basic Info</article>
+    <hr style="margin-top: 0%" />
+  </body>
+</html>
