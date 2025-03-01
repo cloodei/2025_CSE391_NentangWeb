@@ -1,0 +1,26 @@
+body {
+  font-family: "Chakra Petch", sans-serif;
+  --font-color: #c53e14;
+}
+
+.font-color {
+  color: var(--font-color);
+}
+
+.heading {
+  border-left: 6px solid var(--font-color);
+  padding-left: 10px;
+  color: var(--font-color);
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  box-sizing: border-box;
+  width: calc(100% / 3);
+  padding: 0 12px;
+}
