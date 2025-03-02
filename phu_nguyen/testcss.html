@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>test form</title>
+  <style>
+    * {
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .form {
+      border: 2px inset gray;
+      width: 11cm;
+      position: relative;
+    }
+
+    label {
+      /* padding-left: 15px; */
+      margin: 15px;
+      font-weight: bold;
+    }
+
+    input[type="text"] {
+      margin: 15px;
+      border-radius: 4px;
+      font-size: large;
+      width: 10cm;
+      height: 30px;
+    }
+
+    input[type="radio"] {
+      margin-left: 15px;
+      margin-top: 7px;
+    }
+
+    input[type="checkbox"] {
+      margin-left: 15px;
+      margin-top: 7px;
+    }
+
+    .submit {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+    }
+
+    #dangky {
+      font-weight: normal;
+      background-color: rgb(14, 144, 14);
+      color: white;
+      width: 10cm;
+      height: 1cm;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="form">
+    <h3 style="text-align: center;">Form đăng ký</h3>
+      <form action="">
+      <label for="name">Họ tên:</label><br>
+      <input type="text" placeholder="Họ và tên" id="name"><br>
+      <label for="Email">Email:</label>
+      <input type="text" id="Email" placeholder="Email đăng ký">
+      <div>
+        <b style="margin-left: 15px;">Giới tính: <br></b>
+        <input type="radio" id="Nam" value="Nam"> <label for="Nam" style="font-weight: normal; margin-left: 5px;">Nam</label><br>
+        <input type="radio" id="Nữ" value="Nữ"> <label for="Nữ" style="font-weight: normal; margin-left: 5px;">Nữ</label><br> 
+      </div>
+      <div style="margin-top: 10px;">
+        <b style="margin-left: 15px; padding-top: 15px;">Sở thích:</b><br>
+        <input type="checkbox" id="Sach" value="Đọc sách"> <label for="Sach" style="font-weight: normal; margin-left: 5px;">Đọc sách</label><br>
+        <input type="checkbox" id="sport" value="sport"> <label for="sport" style="font-weight: normal; margin-left: 5px;">Chơi thể thao là không ngừng bỏ cuộc</label>
+      </div>
+      <div style="margin-top: 15px;">
+        <label for="nation">Chọn quốc gia:</label><br>
+        <select name="quocgia" id="nation" style="margin: 15px; width: 10cm; height: 30px; font-weight: bold;">
+          <option value="vn">Việt Nam</option>
+          <option value="us">Hoa Kỳ</option>
+          <option value="jp">Nhật Bản</option>
+          <option value="kr">Hàn Quốc</option>
+          <option value="fr">Pháp</option>
+        </select>
+      </div>
+      <div class="submit">
+        <input type="submit" value="Đăng ký" id="dangky">
+      </div>
+      </form>
+  </div>
+</body>
+</html>
