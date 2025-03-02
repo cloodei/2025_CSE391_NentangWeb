@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form</title>
+
+  <link rel="stylesheet" href="./form.css" /> <!-- CSS ĐÂY, FILE FORM.CSS -->
+
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+  <main>
+    <h1 style="text-align: center; margin: 0; margin-bottom: 16px; font-size: 26px;">Form Đăng Ký</h1>
+
+    <form>
+      <label for="name">Họ tên:</label>
+      <input type="text" name="name" id="name" placeholder="Họ và Tên" />
+
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" placeholder="Email" />
+
+      <label for="gender">Giới tính:</label>
+      <input type="radio" name="gender" id="gender" value="Nam" />
+      <label>Nam</label>
+      <br>
+      <input type="radio" name="gender" id="gender" value="Nữ" />
+      <label style="display: inline-block; margin-bottom: 20px;">Nữ</label>
+
+      <label for="fav">Sở thích:</label>
+      <input type="checkbox" value="Đọc sách" style="margin-right: 4px;" />
+      <label>Đọc sách</label>
+      <br>
+      <input type="checkbox" value="Chơi thể thao" style="margin-right: 4px;" />
+      <label style="display: inline-block; margin-bottom: 20px;">Chơi thể thao</label>
+      
+      <label for="country">Chọn quốc gia:</label>
+      <select name="country" id="country">
+        <option value="Việt Nam">Việt Nam</option>
+        <option value="Hoa Kỳ">Hoa Kỳ</option>
+        <option value="Nhật Bản">Nhật Bản</option>
+      </select>
+
+      <button style="margin-top: 16px;">Đăng ký</button>
+    </form>
+  </main>
+  
+</body>
+
+</html>
