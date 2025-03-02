@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Lê Đức Nguyên
+    </title>
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+
+        body {
+            background-color: rgb(214, 209, 209);
+
+
+        }
+
+        main {
+            background-color: white;
+            height: 500px;
+            width: 300px;
+            border-radius: 8px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: auto;
+            margin-top: 100px;
+        }
+
+        div,
+        label {
+            margin-top: 5px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .tieu_de {
+            font-size: 20px;
+
+        }
+
+        input[type=text],
+        input[type=email],
+        select {
+            border: 1px solid gainsboro;
+            border-radius: 5px;
+            width: 260px;
+            height: 35px;
+        }
+
+        input[type=submit] {
+            border: gainsboro;
+            background-color: #04AA6D;
+            color: white;
+            border-radius: 5px;
+            width: 260px;
+            height: 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="tieu_de">
+            <b>Form Đăng Ký</b>
+        </div>
+        <form action="">
+            <label for="fullName">Họ tên:</label><br />
+            <input type="text" name="full_Name" id="fullName" placeholder="Họ và tên"><br />
+            <label for="Email">Email:</label><br />
+            <input type="email" name="email" id="Email" placeholder="Email đăng ký"><br />
+            <div>Giới tính:<br />
+                <input type="radio" id="nam" name="Gioi_Tinh" value="Nam">
+                <label for="nam">Nam</label><br />
+                <input type="radio" id="nu" name="Gioi_Tinh" value="Nữ">
+                <label for="nu">Nữ</label><br />
+            </div>
+
+            <div>Sở thích:<br />
+                <input type="checkbox" name="so_thich" id="so_thich" value="Đọc sách">
+                <label for="so_thich">Đọc sách</label><br />
+                <input type="checkbox" name="so_thich" id="so_thich" value="Chơi thể thao">
+                <label for="so_thich">Chơi thể thao</label>
+            </div>
+
+            <div>Chọn quốc gia:</div>
+            <select name="Quoc_Gia" id="Quoc_Gia">
+                <option value="Việt Nam">Việt Nam</option>
+                <option value="Nhật Bản">Nhật Bản</option>
+            </select><br />
+            <input type="submit" id="Dang_ky" value="Đăng ký">
+        </form>
+
+    </main>
+</body>
+
+</html>
