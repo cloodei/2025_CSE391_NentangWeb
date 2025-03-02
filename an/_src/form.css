@@ -1,0 +1,50 @@
+body {
+  font-family: "Chakra Petch", sans-serif;
+  background-color: #d3d3d3;
+  padding: 16px;
+}
+
+main {
+  margin: auto;
+  max-width: 400px;
+  padding: 28px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+label[for] {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 7px;
+}
+
+input {
+  margin-bottom: 14px;
+}
+
+input[type="text"],
+input[type="email"] {
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid #c9c9c9;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+select {
+  box-sizing: border-box;
+  width: 100%;
+  border: 1px solid #b8b8b8;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+button {
+  box-sizing: border-box;
+  width: 100%;
+  color: white;
+  border: none;
+  background-color: #28a745;
+  padding: 12px;
+  border-radius: 4px;
+}
