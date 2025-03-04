@@ -1,0 +1,39 @@
+* {
+    font-family: sans-serif;
+}
+
+.parent {
+    display: flex;
+    height: 100px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.children-1 {
+
+    width: 30%;
+
+}
+
+h2 {
+    color: #9e1d1d;
+}
+
+h2 span {
+    border: 3px solid;
+    margin-right: 5px;
+}
+
+ul {
+    position: relative;
+    right: 40px;
+}
+
+li {
+    list-style-type: none;
+
+}
+
+li span {
+    margin-right: 3px;
+}
