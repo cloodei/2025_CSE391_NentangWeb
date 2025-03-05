@@ -3,141 +3,229 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Employee Information</title>
+    <title>B4 HTML</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    
     <style>
-      * {
-        font-family: serif;
-      }
       body {
-        font-family: Arial, sans-serif;
-        margin: 20px;
-      }
-      .info-table {
-        width: 100%;
-        max-width: 600px;
-        border-collapse: collapse;
-      }
-      .info-table td {
-        padding: 8px;
-      }
-      .info-table td:first-child {
-        font-weight: bold;
-        width: 30%;
-      }
-      .radio-label {
-        margin-right: 15px;
+        font-size: 18px;
+        font-family: "Roboto";
+        padding: 24px 16px 0;
+        --my-w: 13.5%;
       }
 
-      .text_input {
+      main {
+        padding: 16px 28px;
+      }
+
+      b {
+        font-size: 32px;
+      }
+
+      hr {
+        margin: 0;
+      }
+
+      span {
+        display: inline-block;
+      }
+
+      div.block {
+        margin-bottom: 8px;
         width: 100%;
       }
 
-      article {
+      label.labelling {
+        box-sizing: border-box;
+        display: inline-block;
         font-weight: bold;
-        font-size: large;
-        margin-top: 1cm;
+        width: var(--my-w);
+      }
+
+      input.custom {
+        box-sizing: border-box;
+        padding: 7px 4px;
+        width: calc(100% - var(--my-w) - 5px);
+        border-radius: 4px;
       }
     </style>
   </head>
+  
   <body>
-    <article>Basic Info</article>
-    <hr style="margin-top: 0%" />
-    <table class="info-table">
-      <tr>
-        <td>Employee ID</td>
-        <td>9</td>
-      </tr>
-      <tr>
-        <td>Last Name</td>
-        <td>Dodsworth</td>
-      </tr>
-      <tr>
-        <td><label for="first_name">First Name</label></td>
-        <td>
-          <input
-            type="text"
-            id="first_name"
-            name="firstname"
-            class="text_input"
-            autocomplete
-          />
-        </td>
-      </tr>
-      <tr>
-        <td>Gender</td>
-        <td>
-          <label class="radio-label"
-            ><input type="radio" name="gender" /> Male</label
-          ><br />
-          <label class="radio-label"
-            ><input type="radio" name="gender" /> Female</label
-          ><br />
-          <label class="radio-label"
-            ><input type="radio" name="gender" /> XXX</label
-          ><br />
-          <label class="radio-label"
-            ><input type="radio" name="gender" checked /> ZZZ</label
-          >
-        </td>
-      </tr>
-      <tr>
-        <td><label for="Title">Title</label></td>
-        <td>
-          <input type="text" id="Title" name="Title" class="text_input" />
-        </td>
-      </tr>
-      <tr>
-        <td><label for="Suffix">Suffix</label></td>
-        <td>
-          <input type="text" id="Suffix" name="Suffix" class="text_input" />
-        </td>
-      </tr>
-      <tr>
-        <td><label for="BirthDate">BirthDate</label></td>
-        <td>
-          <input
-            type="datetime-local"
-            id="BirthDate"
-            name="BirthDate"
-            class="text_input"
-          />
-        </td>
-      </tr>
-      <tr>
-        <td><label for="HireDate">HireDate</label></td>
-        <td>
-          <input
-            type="datetime-local"
-            id="HireDate"
-            name="HireDate"
-            class="text_input"
-          />
-        </td>
-      </tr>
-      <tr>
-        <td><label for="SSN">SSN # (if applicable)</label></td>
-        <td>
-          <input
-            type="email"
-            id="SSN"
-            name="SSN"
-            class="text_input"
-            novalidate
-          />
-        </td>
-      </tr>
-      <tr>
-        <td><label for="rp">Reports To</label></td>
-        <td>
-          <select name="rp" size="3" id="rp">
-            <option value="option1">Buchanan</option>
-            <option value="option2">nguyendz</option>
-            <option value="option3">nguỹenautrai</option>
-          </select>
-        </td>
-      </tr>
-    </table>
-    <article>Basic Info</article>
-    <hr style="margin-top: 0%" />
+    <form action="">
+      <section>
+        <b>Basic Info</b>
+        <hr />
+        <main>
+          <div class="block">
+            <label class="labelling" for="nothing"> Employee ID </label>
+            <span> 9 </span>
+          </div>
+
+          <div class="block">
+            <label class="labelling" for="nothing"> Last Name </label>
+            <span> Dodsworth </span>
+          </div>
+
+          <div class="block">
+            <label class="labelling" for="first-name"> First Name </label>
+            <input
+              type="text"
+              name="first-name"
+              id="first-name"
+              placeholder="Anne"
+              class="custom"
+            />
+          </div>
+
+          <div class="block" style="display: flex">
+            <label class="labelling" style="margin: auto 0" for="gender">
+              Gender
+            </label>
+            <div>
+              <div>
+                <input
+                  type="radio"
+                  name="gender"
+                  id="gender"
+                  placeholder="Anne"
+                />
+                <label for="gender">Male</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="gender"
+                  id="gender"
+                  placeholder="Anne"
+                />
+                <label for="gender">Female</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="gender"
+                  id="gender"
+                  placeholder="Anne"
+                />
+                <label for="gender">Other</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="block">
+            <label class="labelling" for="first-name"> Title </label>
+            <input
+              type="text"
+              name="first-name"
+              id="first-name"
+              placeholder="Ms."
+              class="custom"
+            />
+          </div>
+
+          <div class="block">
+            <label class="labelling" for="first-name"> Suffix </label>
+            <input
+              type="text"
+              name="first-name"
+              id="first-name"
+              placeholder="Sales Representative"
+              class="custom"
+            />
+          </div>
+
+          <div class="block">
+            <label class="labelling" for="first-name"> BirthDate </label>
+            <input
+              type="datetime-local"
+              name="first-name"
+              id="first-name"
+              placeholder="Sales Representative"
+              class="custom"
+            />
+          </div>
+
+          <div class="block">
+            <label class="labelling" for="first-name"> HireDate </label>
+            <input
+              type="datetime-local"
+              name="first-name"
+              id="first-name"
+              placeholder="Sales Representative"
+              class="custom"
+            />
+          </div>
+
+          <div class="block">
+            <label class="labelling" for="first-name">
+              SSN # (if applicable)
+            </label>
+            <input
+              type="number"
+              name="first-name"
+              id="first-name"
+              placeholder=""
+              class="custom"
+            />
+          </div>
+
+          <div class="block">
+            <label class="labelling" for="first-name"> Reports to </label>
+            <select
+              name="report"
+              id=""
+              style="padding: 8px 9px; font-size: 18px; border-radius: 6px"
+            >
+              <option value="Buchanan">Buchanan</option>
+              <option value="Buchanan">Haha</option>
+            </select>
+          </div>
+        </main>
+      </section>
+
+      <section>
+        <b>Contact Info</b>
+        <hr />
+        <main>
+          <div class="block">
+            <label class="labelling" for="first-name"> Email </label>
+            <input
+              type="email"
+              name="first-name"
+              id="first-name"
+              placeholder="name@example.com"
+              class="custom"
+            />
+          </div>
+          <div class="block">
+            <label class="labelling" for="first-name"> Address </label>
+            <input
+              type="text"
+              name="first-name"
+              id="first-name"
+              placeholder="7 Houndstooth Rd."
+              class="custom"
+            />
+          </div>
+          <div class="block">
+            <label class="labelling" for="first-name"> City </label>
+            <input
+              type="text"
+              name="first-name"
+              id="first-name"
+              placeholder="London"
+              class="custom"
+            />
+          </div>
+        </main>
+      </section>
+    </form>
   </body>
 </html>
