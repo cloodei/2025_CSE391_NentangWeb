@@ -1,0 +1,38 @@
+body {
+  font-family: sans-serif;
+  padding: 0 16px;
+}
+
+.parent {
+  display: flex;
+  height: 100px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.children {
+  width: 30%;
+}
+
+div h3 + p {
+  line-height: 24px;
+}
+
+h2 {
+  color: #9e1d1d;
+  border-left: 6px solid #9e1d1d;
+  padding: 4px 9px;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+li span {
+  margin-right: 3px;
+}
