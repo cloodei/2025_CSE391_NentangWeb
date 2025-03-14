@@ -15,11 +15,11 @@ form.addEventListener("submit", (event) => {
   li.classList.add("todo-item");
   li.innerHTML += `<p id="todo">${data}</p>`;
 
-  const btn = document.createElement("btn");
-  btn.classList.add("delBtn");
-  btn.innerText = "Xóa";
-  btn.addEventListener("click", () => btn.previousElementSibling.classList.toggle("removed"));
+  const button = document.createElement("button");
+  button.classList.add("delBtn");
+  button.innerText = "Xóa";
+  button.addEventListener("click", () => button.previousElementSibling.classList.toggle("removed"));
   
-  li.appendChild(btn);
+  li.appendChild(button);
   ul.appendChild(li);
 });
