@@ -14,11 +14,12 @@ form.addEventListener("submit", (event) => {
   const li = document.createElement("li");
   li.classList.add("todo-item");
   li.innerHTML += `<p id="todo">${data}</p>`;
+  li.addEventListener("click", () => li.classList.toggle("removed"));
 
   const button = document.createElement("button");
   button.classList.add("delBtn");
   button.innerText = "Xóa";
-  button.addEventListener("click", () => button.previousElementSibling.classList.toggle("removed"));
+  button.addEventListener("click", () => li.remove());
   
   li.appendChild(button);
   ul.appendChild(li);

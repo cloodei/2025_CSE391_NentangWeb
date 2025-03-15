@@ -55,7 +55,7 @@ ul {
   font-weight: 500;
 }
 
-.removed {
+.removed > #todo {
   text-decoration: line-through;
   color: gray;
 }
