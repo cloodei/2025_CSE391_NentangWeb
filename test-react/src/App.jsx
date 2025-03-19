@@ -1,5 +1,4 @@
 import { Button } from './components/button';
-import { useState } from 'react';
 import { ChevronDown, ChevronRight, ChevronUp, CirclePlus, CircleX, Eye, Pencil, Search, Upload } from "lucide-react";
 
 export default function App() {
