@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+:root {
+  --foreground-rgb: 229, 231, 235;
+  --background-rgb: 18, 18, 23;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: rgb(var(--foreground-rgb));
+  background-color: rgb(var(--background-rgb));
+  /* background-image: url("bg.svg"); */
+}
+
+::selection {
+  background-color: #4c6ef54d;
+  color: white;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
