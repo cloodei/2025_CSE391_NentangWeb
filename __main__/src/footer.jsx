@@ -40,7 +40,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-[#3a3b44]/20 text-center text-gray-500 text-sm">
-          © 2040 NeoMarket. All rights reserved.
+          © 2040 ReactShop. All rights reserved.
         </div>
       </div>
     </footer>

@@ -33,11 +33,11 @@ export default function Form({ submit, categories }) {
 
   return (
     <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-16 mb-8">
-      <h2 className="text-3xl font-bold mb-8 text-white">Add New Product</h2>
+      <h2 className="text-3xl font-semibold mb-5 text-white text-center">Add New Item</h2>
 
       <form onSubmit={handleSubmit} className="space-y-6 bg-[#141516] p-8 rounded-xl border border-[#3a3b44]/30 shadow-lg">
         <div>
-          <label className="block text-sm font-medium text-gray-300 mb-2">Product Name</label>
+          <label className="block text-sm font-medium text-gray-300 mb-2">Item Name</label>
           <input
             type="text"
             value={form.name}
@@ -100,9 +100,9 @@ export default function Form({ submit, categories }) {
 
         <button
           type="submit"
-          className="w-full bg-gradient-to-r from-[#508bb3] to-[#8c73c7] hover:from-[#8c73c7] hover:to-[#508bb3] text-white font-bold py-3 px-8 rounded-lg transition-all transform hover:scale-[1.02]"
+          className="w-full cursor-pointer bg-gradient-to-r from-[#508bb3] to-[#8c73c7] hover:from-[#8c73c7] hover:to-[#508bb3] text-white font-bold py-3 px-8 rounded-lg transition-all transform hover:scale-[1.02]"
         >
-          Add product
+          Add Item
         </button>
       </form>
     </div>
