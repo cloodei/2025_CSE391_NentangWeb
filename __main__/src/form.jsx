@@ -21,14 +21,19 @@ export default function Form({ submit, categories }) {
     terms: ''
   });
 
-
+  /**
+   * Neu du lieu form ko dung, `setFormErrors()`, return true
+  */
   const validateForm = () => {
-    // Neu error, setFormErrors(), return true
+
   };
 
-  /** @param {React.FormEvent<HTMLFormElement>} e */
+  /**
+   * `validateForm()` roi `submit()` di
+   * @param {React.FormEvent<HTMLFormElement>} e
+  */
   const handleSubmit = (e) => {
-    // validate va submit()
+
   };
 
   return (
