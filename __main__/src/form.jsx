@@ -86,7 +86,7 @@ export default function Form({ submit, categories }) {
           {formErrors.image && <p className="text-red-500 text-sm mt-1">{formErrors.image}</p>}
         </div>
 
-        <div className="flex items-center gap-2">
+        <div>
           <input
             type="checkbox"
             id="terms"
@@ -94,9 +94,11 @@ export default function Form({ submit, categories }) {
             onChange={e => setForm({ ...form, terms: e.target.checked })}
             className="rounded bg-[#222427] border-gray-600 text-[#508bb3] focus:ring-[#508bb3]"
           />
-          <label htmlFor="terms" className="text-sm text-gray-300">I agree to the terms and conditions</label>
+          <label htmlFor="terms" className="text-sm text-gray-300 ml-2">
+            You felt your sins crawling on your back
+          </label>
+          {formErrors.terms && <p className="text-red-500 text-sm">{formErrors.terms}</p>}
         </div>
-        {formErrors.terms && <p className="text-red-500 text-sm">{formErrors.terms}</p>}
 
         <button
           type="submit"
