@@ -42,7 +42,7 @@ export default function App() {
                 Je fais tout moi-même
               </h1>
               <p className="text-xl text-gray-400 mb-8">
-                104 101 108 108 111 32 119 111 114 108 100
+                Do you really want to have a bad time?
               </p>
               <button className="bg-gradient-to-r from-[#5fadc0] to-[#adc2d4] transition-all transform hover:scale-110 duration-300 text-white font-bold py-3 px-8 rounded-full shadow-lg shadow-[#5fadc03f]">
                 mot minh tao
