@@ -25,8 +25,11 @@ export default function App() {
   };
 
 
+  /**
+   * Them `data` vao `items` bằng `setItems()`
+  */
   const addNewItem = (data) => {
-    // Them `data` vao `items` bằng `setItems()`
+    
   }
   
 

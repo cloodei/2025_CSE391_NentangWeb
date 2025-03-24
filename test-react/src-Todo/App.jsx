@@ -20,7 +20,7 @@ export default function App() {
     { id: 15, time: '05:00 100/01/6969', text: 'setState',    status: 'destroyed' },
   ]);
 
-  // Dung setTodos, thay doi status
+  // Dung setTodos, update đúng trạng thái
   const complete = () => {
     
   }
@@ -33,7 +33,7 @@ export default function App() {
 
   }
 
-  const news = todos.filter(todo => todo.status === "new");
+  const news      = todos.filter(todo => todo.status === "new");
   const completed = todos.filter(todo => todo.status === "completed");
   const destroyed = todos.filter(todo => todo.status === "destroyed");
 
@@ -42,15 +42,9 @@ export default function App() {
       
       <div className="max-w-4xl mx-auto">
         <div className="grid grid-cols-3 gap-2 mb-6">
-          <p className="text-center bg-blue-500 text-white py-3 px-4 rounded font-medium">
-            Mới
-          </p>
-          <p className="text-center bg-green-500 text-white py-3 px-4 rounded font-medium">
-            Đã hoàn thành
-          </p>
-          <p className="text-center bg-red-500 text-white py-3 px-4 rounded font-medium">
-            Đã hủy
-          </p>
+          <p className="text-center text-white py-3 px-4 rounded font-medium bg-blue-500">Mới</p>
+          <p className="text-center text-white py-3 px-4 rounded font-medium bg-green-500">Đã hoàn thành</p>
+          <p className="text-center text-white py-3 px-4 rounded font-medium bg-red-500">Đã hủy</p>
         </div>
 
         <div className="grid grid-cols-3 gap-2">
@@ -66,10 +60,10 @@ export default function App() {
                 </div>
 
                 <div className="flex gap-0.5">
-                  <button className="p-1 text-green-600 transition hover:bg-green-100 rounded cursor-pointer" onClick={complete}>
+                  <button className="p-1 transition rounded cursor-pointer hover:bg-green-100 text-green-600" onClick={complete}>
                     <Edit size={18} />
                   </button>
-                  <button className="p-1 text-red-600 transition hover:bg-red-100 rounded cursor-pointer" onClick={destroy}>
+                  <button className="p-1 transition rounded cursor-pointer hover:bg-red-100 text-red-600" onClick={destroy}>
                     <Trash size={18} />
                   </button>
                 </div>
@@ -89,7 +83,7 @@ export default function App() {
                   <p className="font-medium">{todo.text}</p>
                 </div>
 
-                <button className="p-1 text-red-600 transition hover:bg-red-100 rounded cursor-pointer" onClick={destroy}>
+                <button className="p-1 transition rounded cursor-pointer hover:bg-red-100 text-red-600" onClick={destroy}>
                   <Trash size={18} />
                 </button>
 
@@ -108,7 +102,7 @@ export default function App() {
                   <p className="font-medium">{todo.text}</p>
                 </div>
 
-                <button className="p-1 text-blue-600 transition hover:bg-blue-100 rounded cursor-pointer" onClick={renew}>
+                <button className="p-1 transition rounded cursor-pointer hover:bg-blue-100 text-blue-600" onClick={renew}>
                   <RotateCcw size={18} />
                 </button>
 
