@@ -1,39 +1,59 @@
 import React, { useState } from "react";
 
-/**
- * @param   {{ submit: (data) => void, categories: string[] }}
- * @returns {React.JSX.Element}
-*/
+/** @param {{ submit: (data) => void, categories: string[] }} */
 export default function Form({ submit, categories }) {
   const [form, setForm] = useState({
     name: '',
     price: '',
     category: 'Audio',
-    seller: '',
     image: '',
-    terms: false
   });
   const [formErrors, setFormErrors] = useState({
     name: '',
     price: '',
-    seller: '',
     image: '',
-    terms: ''
   });
 
-  /**
-   * Neu du lieu form ko dung, `setFormErrors()`, return true
-  */
   const validateForm = () => {
+    const errors = {
+      name: '',
+      price: '',
+      image: ''
+    };
+    let valid = true;
 
+    if(!form.name.trim()) {
+      errors.name = "Item name is required";
+      valid = false;
+    }
+    
+    const prc = parseFloat(form.price.trim());
+    if(isNaN(prc) || !prc || prc <= 0) {
+      errors.price = "Item price is invalid";
+      valid = false;
+    }
+    if(!form.image.trim()) {
+      errors.image = "Item image is required";
+      valid = false;
+    }
+
+    setFormErrors(errors);
+    return valid;
   };
 
-  /**
-   * `validateForm()` roi `submit()` di
-   * @param {React.FormEvent<HTMLFormElement>} e
-  */
+  /** @param {React.FormEvent<HTMLFormElement>} e */
   const handleSubmit = (e) => {
+    e.preventDefault();
+    if(!validateForm())
+      return;
 
+    setForm({
+      name: '',
+      price: '',
+      category: 'Audio',
+      image: '',
+    });
+    submit(form);
   };
 
   return (
@@ -89,20 +109,6 @@ export default function Form({ submit, categories }) {
             }`}
           />
           {formErrors.image && <p className="text-red-500 text-sm mt-1">{formErrors.image}</p>}
-        </div>
-
-        <div>
-          <input
-            type="checkbox"
-            id="terms"
-            checked={form.terms}
-            onChange={e => setForm({ ...form, terms: e.target.checked })}
-            className="rounded bg-[#222427] border-gray-600 text-[#508bb3] focus:ring-[#508bb3]"
-          />
-          <label htmlFor="terms" className="text-sm text-gray-300 ml-2">
-            You felt your sins crawling on your back
-          </label>
-          {formErrors.terms && <p className="text-red-500 text-sm">{formErrors.terms}</p>}
         </div>
 
         <button
