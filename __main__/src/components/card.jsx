@@ -1,10 +1,7 @@
 import React from "react";
 import { Heart, Star } from "lucide-react";
 
-/**
- * @param   {{ addToCart: () => void, product: { id: number; name: string; price: number; seller: string; image: string; rating: number; category: string } }}
- * @returns {React.JSX.Element}
-*/
+/** @param {{ addToCart: () => void, product: { id: number; name: string; price: number; seller: string; image: string; rating: number; category: string } }} */
 export default function Card({ addToCart, product }) {
   return (
     <div className="bg-[#141516] rounded-xl overflow-hidden hover:shadow-[0_-1px_36px_rgb(86,72,156,0.23)] transition-all duration-300 transform hover:-translate-y-1.5 border border-[#141516]/30">

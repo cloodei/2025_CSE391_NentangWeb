@@ -11,6 +11,7 @@ let timer;
 
 export default function App() {
   const [items, setItems] = useState(data.items);
+  const [toast, setToast] = useState("");
   const [notif, setNotif] = useState(false);
   const [count, setCount] = useState(0);
 
@@ -21,15 +22,25 @@ export default function App() {
 
     setCount(count + 1);
     setNotif(true);
+    setToast("Item added to cart!");
     timer = setTimeout(() => setNotif(false), 1750);
   };
 
-
-  /**
-   * Them `data` vao `items` bằng `setItems()`
-  */
   const addNewItem = (data) => {
-    
+    clearTimeout(timer);
+    if(count >= 99)
+      return;
+
+    const add = {
+      id: items.length + 1,
+      ...data,
+      seller: "Nike",
+      rating: 5,
+    }
+    setNotif(true);
+    setToast("New item created!");
+    setItems([...items, add]);
+    timer = setTimeout(() => setNotif(false), 1750);
   }
   
 
@@ -54,7 +65,7 @@ export default function App() {
           </div>
         </div>
 
-        {/* Products */}
+        {/* PRODUCTS */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <h2 className="text-3xl font-bold mb-8 text-white">Featured Products</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -68,7 +79,7 @@ export default function App() {
 
       <Toast className={`${notif ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}>
         <CheckCircleIcon className="inline-block mr-2 text-emerald-400" />
-        Item added to cart!
+        {toast}
       </Toast>
 
       <Footer />

@@ -1,10 +1,7 @@
 import React from "react";
 import { twMerge } from "tailwind-merge";
 
-/**
- * @param   {React.HTMLAttributes<HTMLDivElement>}
- * @returns {React.JSX.Element}
-*/
+/** @param {React.HTMLAttributes<HTMLDivElement>} */
 export default function Toast({ className, children, ...props }) {
   return (
     <div 
