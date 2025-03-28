@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 import { Flower2, HeartCrack, Menu, PersonStanding, Search, ShoppingCart } from "lucide-react";
 
 export default function Header({ count }) {
@@ -20,17 +21,17 @@ export default function Header({ count }) {
           <div className="hidden md:flex items-center gap-8">
             <div className="flex items-center gap-1.5">
               <HeartCrack className="h-6 w-6" />
-              <a href="#">but</a>
+              <Link to="/">Home</Link>
             </div>
 
             <div className="flex items-center gap-1.5">
               <PersonStanding className="h-6 w-6" />
-              <a href="#">nobody</a>
+              <Link to="/products">Shop</Link>
             </div>
 
             <div className="flex items-center gap-1.5">
               <Flower2 className="h-6 w-6" />
-              <a href="#">came</a>
+              <Link to="/add-product">Create</Link>
             </div>
           </div>
 

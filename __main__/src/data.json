@@ -2,55 +2,55 @@
   "items": [
     {
       "id": 1,
-      "name": "Ethereal Echo Headphones",
-      "price": 299.99,
-      "seller": "TechVibe Studios",
-      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&auto=format&fit=crop&q=60",
+      "name": "Not Clang",
+      "price": 999.99,
+      "seller": "LLVM",
+      "image": "prod1.png",
       "rating": 4.8,
       "category": "Audio"
     },
     {
       "id": 2,
-      "name": "Quantum Gaming Console",
-      "price": 599.99,
-      "seller": "GamersParadise",
-      "image": "https://images.unsplash.com/photo-1486401899868-0e435ed85128?w=800&auto=format&fit=crop&q=60",
+      "name": "Orange Crab",
+      "price": 899.99,
+      "seller": "The Rust Team",
+      "image": "prod2.webp",
       "rating": 4.9,
       "category": "Gaming"
     },
     {
       "id": 3,
-      "name": "NeoVision Smart Glasses",
-      "price": 449.99,
-      "seller": "FutureWear",
-      "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=800&auto=format&fit=crop&q=60",
+      "name": "Ziggy",
+      "price": 9999.99,
+      "seller": "Andrew Kelley",
+      "image": "prod3.svg",
       "rating": 4.7,
       "category": "Wearables"
     },
     {
       "id": 4,
-      "name": "Stellar Drone Pro",
+      "name": "Gopher",
       "price": 799.99,
-      "seller": "SkyTech Innovations",
-      "image": "https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=800&auto=format&fit=crop&q=60",
+      "seller": "Google",
+      "image": "prod4.jpg",
       "rating": 4.6,
       "category": "Drones"
     },
     {
       "id": 5,
-      "name": "Cyberpunk Watch X",
-      "price": 349.99,
-      "seller": "TimeMasters",
-      "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&auto=format&fit=crop&q=60",
+      "name": "Hassle",
+      "price": 1.99,
+      "seller": "GHC",
+      "image": "prod5.png",
       "rating": 4.9,
       "category": "Wearables"
     },
     {
       "id": 6,
-      "name": "HoloLens Reality",
-      "price": 1299.99,
-      "seller": "VirtualVisions",
-      "image": "https://images.unsplash.com/photo-1626307416562-ee839676f5fc?w=800&auto=format&fit=crop&q=60",
+      "name": "Very Fast",
+      "price": 1.99,
+      "seller": "Apple",
+      "image": "prod6.webp",
       "rating": 4.8,
       "category": "VR/AR"
     }
