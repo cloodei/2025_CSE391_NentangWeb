@@ -4,14 +4,14 @@ import { Heart, Star } from "lucide-react";
 /** @param {{ addToCart: () => void, product: { id: number; name: string; price: number; seller: string; image: string; rating: number; category: string } }} */
 export default function Card({ addToCart, product }) {
   return (
-    <div className="bg-[#141516] rounded-xl overflow-hidden hover:shadow-[0_-1px_36px_rgb(86,72,156,0.23)] transition-all duration-300 transform hover:-translate-y-1.5 border border-[#141516]/30">
+    <div className="bg-[#141516] rounded-xl overflow-hidden hover:shadow-[0_-1px_36px_rgb(86,72,156,0.23)] transition-all duration-300 transform hover:-translate-y-1.5 border border-[#3a3b44]/35 shadow-lg">
 
       <div className="relative">
         <div className="w-full h-64 overflow-hidden">
           <img
             src={product.image}
             alt={product.name}
-            className="w-full h-full object-cover transition-transform duration-[230ms] hover:scale-[1.16]"
+            className="w-full h-[100%] object-cover transition-transform duration-[230ms] hover:scale-[1.16]"
           />
         </div>
 
@@ -33,7 +33,7 @@ export default function Card({ addToCart, product }) {
         <p className="text-gray-400 text-sm mb-4">From {product.seller}</p>
 
         <div className="flex items-center justify-between">
-          <span className="text-xl font-bold">${product.price}</span>
+          <span className="text-xl font-bold">${product.price.toFixed(2)}</span>
 
           <button 
             onClick={addToCart}

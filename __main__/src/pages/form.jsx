@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router";
 
 /** @param {{ submit: (data) => void, categories: string[] }} */
 export default function Form({ submit, categories }) {
+  const navigate = useNavigate();
   const [form, setForm] = useState({
     name: '',
     price: '',
@@ -11,34 +13,24 @@ export default function Form({ submit, categories }) {
   const [formErrors, setFormErrors] = useState({
     name: '',
     price: '',
-    image: '',
   });
 
-  const validateForm = () => {
-    const errors = {
-      name: '',
-      price: '',
-      image: ''
-    };
-    let valid = true;
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
-    if(!form.name.trim()) {
+  const validateForm = () => {
+    const errors = {}
+
+    if(!form.name.trim())
       errors.name = "Item name is required";
-      valid = false;
-    }
     
     const prc = parseFloat(form.price.trim());
-    if(isNaN(prc) || !prc || prc <= 0) {
+    if(isNaN(prc) || !prc || prc <= 0)
       errors.price = "Item price is invalid";
-      valid = false;
-    }
-    if(!form.image.trim()) {
-      errors.image = "Item image is required";
-      valid = false;
-    }
 
     setFormErrors(errors);
-    return valid;
+    return Object.keys(errors).length === 0;
   };
 
   /** @param {React.FormEvent<HTMLFormElement>} e */
@@ -47,13 +39,19 @@ export default function Form({ submit, categories }) {
     if(!validateForm())
       return;
 
+    if(!form.image.trim())
+      form.image = "default.webp";
+
+    form.price = parseFloat(form.price.trim());
+    submit(form);
+
     setForm({
       name: '',
       price: '',
       category: 'Audio',
       image: '',
     });
-    submit(form);
+    navigate('/products');
   };
 
   return (
